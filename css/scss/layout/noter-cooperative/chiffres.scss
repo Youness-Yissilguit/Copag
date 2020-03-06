@@ -1,0 +1,32 @@
+.chiffres{
+  min-height: 79vh;
+  background: url('../images/chiffre.jpg') no-repeat fixed;
+  @include prefixer(background-size, cover);
+  h2{
+    color: #FFF;
+    margin-bottom: 30px;
+  }
+  .chiffre-box{
+    padding: 15px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 3px #CCC;
+    border: 1px solid #CCC;
+    min-height: 156px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0px auto 15px;
+    h4{
+      font-weight: bolder;
+      color: $mainBlue;
+      font-size: 28px
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .chiffres{
+    background: url('../images/chiffre.jpg') no-repeat fixed 35% 100%;
+  }
+}

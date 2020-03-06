@@ -1,0 +1,91 @@
+@import "scss/variables/variables.scss";
+@import "scss/mixins/mixins.scss";
+@import "scss/globales/globales.scss";
+@import "scss/layout/upperbar.scss";
+@import "scss/layout/navbar.scss";
+@import "scss/layout/home.scss";
+/*Noter Coopérative*/
+@import "scss/layout/noter-cooperative/mot-du-president.scss";
+@import "scss/layout/noter-cooperative/mission.scss";
+@import "scss/layout/noter-cooperative/vision.scss";
+@import "scss/layout/noter-cooperative/organisation.scss";
+@import "scss/layout/noter-cooperative/chiffres.scss";
+@import "scss/layout/noter-cooperative/history.scss";
+@import "scss/layout/noter-cooperative/localisation.scss";
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap');
+/*No Activite*/
+@import "scss/layout/no-activite/agrumes.scss";
+@import "scss/layout/no-activite/primeurs.scss";
+@import "scss/layout/no-activite/jusdefruit.scss";
+@import "scss/layout/no-activite/produitslait.scss";
+@import "scss/layout/no-activite/viands.scss";
+@import "scss/layout/no-activite/services.scss";
+/*No Marques*/
+@import "scss/layout/no-marque/marque.scss";
+/*Developpment durable*/
+@import "scss/layout/developpment/developpment.scss";
+/*contact*/
+@import "scss/layout/contact/contact.scss";
+@import "scss/layout/contact/stage.scss";
+/*Liens Utiles*/
+@import "scss/layout/liens utiles/lienutiles.scss";
+/*media-icon*/
+.media-icon{
+  position: fixed;
+  top: 30vh;
+  left: -50px;
+  z-index: 777;
+  @include prefixer(transition, all .3s);
+  &.active{
+    left: 0
+  }
+  li{
+    width: 45px;
+    height:45px;
+    border-bottom: 1px solid #ccc;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include prefixer(transition, all .3s);
+    cursor: pointer;
+    &:hover{
+      width: 50px;
+      background-color: #373737;
+      &:hover .fa-twitter{color: #1da1f2}
+      &:hover .fa-youtube{color: #ff0000}
+      &:hover .fa-facebook-f{color: #3b5998}
+      &:hover .fa-instagram{color: #c13584}
+      &:hover .fa-linkedin-in{color: #0077b5}
+      &:hover .fa-book-open{color: #60ab59}
+    }
+    a{
+      color: #fff;
+      i{
+        @include prefixer(transition, all .3s);
+        font-size: 19px
+      }
+    }
+  }
+  .fa-forward, .fa-backward{
+    position: absolute;
+    right: -30px;
+    cursor: pointer;
+    font-size: 20px
+  }
+  .fa-backward{
+    bottom : 0;
+    display: none
+  }
+}
+/*Footer*/
+footer{
+  background-color: $mainBlue;
+  color: #FFF;
+  height: 5vh;
+  p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 5vh
+  }
+}

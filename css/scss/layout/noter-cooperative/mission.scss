@@ -1,0 +1,49 @@
+.mission{
+  min-height: 60vh;
+  background: url('../images/mission.jpg') no-repeat fixed;
+  @include prefixer(background-size, cover);
+  h2{
+    color: #FFF;
+  }
+  p{
+    color:#c6c6c6;
+    font-weight: bolder;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    line-height: 1.8;
+    z-index: 121
+  }
+}
+@media (max-width: 768px) {
+  .mission{
+    background: url('../images/mission.jpg') no-repeat fixed 35% 100%;
+    p{
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 14px
+    }
+  }
+}
+/*.mission{
+  min-height: 79vh;
+  background: url('../images/mission.jpg') no-repeat;
+  @include prefixer(background-size, cover);
+  z-index: -1;
+  color: #FFF;
+  h2{
+    color: #FFF;
+  }
+  p{
+    color:#c6c6c6;
+    font-weight: bolder;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    line-height: 1.8;
+    z-index: 121
+  }
+}*/

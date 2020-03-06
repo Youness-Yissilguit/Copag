@@ -1,0 +1,64 @@
+*{
+  @include prefixer(box-sizing, border-box);
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+input,textarea,
+input:focus,textarea:focus{
+  border: 0;
+  outline: none
+}
+a, a:hover{
+  text-decoration: none
+}
+img{
+  object-fit: cover
+}
+.main-h2{
+  position: relative;
+  text-align:left;
+  margin: 40px 0 0 20px;
+  color: #000;
+  font-weight: bold;
+  display: inline-block;
+  font-family: 'Kelly Slab', cursivess;
+  display: inline-block;
+  &::before{
+    content: '*';
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    border-radius: 50%;
+    color: $lightBlue;
+    top: 3%;
+    left: -25px;
+    font-weight: bolder;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background-color: $lightBlue;
+    top: 105%;
+    right: 0;
+  }
+}
+@media (max-width: 576px) {
+  .main-h2{
+    font-size: 25px
+  }
+}
+.reset-pr{
+  padding-right: 0
+}
+.reset-pl{
+  padding-left: 0
+}

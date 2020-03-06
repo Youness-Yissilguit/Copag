@@ -1,0 +1,14 @@
+.organisation{
+  .org-img{
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 576px) {
+  .organisation{
+    .org-img{
+      width: 100%;
+      margin: 20px auto;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!--meta-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--title-->
+    <title>COPAG</title>
+    <!--links-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/index.ico">
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Akronim&display=swap" rel="stylesheet">
+  </head>
+  <body onload="login()">
+    <!--the upperbar-->
+    <div class="upperbar home-nav">
+      <div class="container">
+        <div class="upperbar-content position-relative">
+          <div class="searsh text-center">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="lang">
+            <a href="#" class="active">Fr</a>
+            <a href="#">Ar</a>
+            <a href="#">En</a>
+          </div>
+          <div class="input position-absolute">
+            <input class="d-block" type="text" placeholder="Searsh">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--the navbar-->
+    <div class="navbar home-nav">
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="home.html"><img class="img-fluid" src="images/logo2.png" alt=""></a>
+        </div>
+        <div class="burger-bar home-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-parent">
+      <div class="nav">
+        <div class="nav-logo">
+          <a href="index.html"><img class="img-fluid" src="images/logo2.png" alt=""></a>
+          <p class="text-center">Intégration Et Développment Humain</p>
+        </div>
+        <div class="nav-links">
+          <a class="main-a" href="links/noter-coperative.html">Noter Copérative</a>
+          <a class="main-a" href="#" data-toggle="#slide2">Nos Activités<i class="fas fa-chevron-down"></i></a>
+          <div id="slide2" class="sub-links">
+            <a href="links/agrumes.html">Agrumes</a>
+            <a href="links/primeurs.html">Primeurs</a>
+            <a href="links/jus-de-fruit.html">Jus De Fruit</a>
+            <a href="links/produits-laitiers.html">Produits Laitiers</a>
+            <a href="links/viands.html">Viandes</a>
+            <a href="links/services.html">Services Rendus Aux Adhérents</a>
+          </div>
+          <a class="main-a" href="no-marque.html">Nos Marques</a>
+          <a class="main-a" href="developpment.html">Développment Durable</a>
+          <a class="main-a" href="#" data-toggle="#slide5">Contact<i class="fas fa-chevron-down"></i></a>
+          <div id="slide5" class="sub-links">
+            <a href="links/contact.html">contact-nous</a>
+            <a href="links/espace-stage.html">Espace recrutement & Stage</a>
+          </div>
+          <a class="main-a" href="links/liens-utiles.html">Liens Utiles</a>
+        </div>
+      </div>
+    </div>
+    <!--End The Navbar-->
+
+    <!--the header-->
+    <header class="position-relative">
+      <div class="overlay"></div>
+      <div class="content-container">
+        <div class="heading-container">
+          <h1 class='active'>UNE AGRICULTURE AU SERVICE DU DÉVELOPPEMENT HUMAIN</h1>
+          <h1>LA COPAG, LA PLUS GRANDE COOPÉRATIVE INTÉGRÉE DU ROYAUME</h1>
+          <h1>POUR UNE AGRICULTURE PROSPÈRE ET DURABLE</h1>
+          <h1>DES ACTIVITÉS AGRICOLES AU SERVICE DU CONSOMMATEUR</h1>
+          <h1 class="last-Title">UNE COOPÉRATIVE ORIENTÉE DÉVELOPPEMENT DURABLE</h1>
+        </div>
+      </div>
+    </header>
+
+    <!--Alert-->
+    <section id='alert'>
+      <div class="alert-content position-relative">
+        <i class="fas fa-times-circle"></i>
+        <a href="links/liens-utiles.html"><img src="images/magazine/mag.jpeg" alt=""></a>
+      </div>
+    </section>
+
+    <!--scripts-->
+    <script src="js/jQuery%20v3-4-1.js"></script>
+    <script src="js/popovers.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+    </script>
+    <script>
+      $(function () {
+        //Text Slide
+        var myTitle = $('header .heading-container h1.active');
+        function textSlider() {
+          if($('header .heading-container h1.active').hasClass('last-Title')){
+            $('header .heading-container h1.last-Title').removeClass('active');
+            $('header .heading-container h1:first-of-type').addClass('active');
+          }
+          $('header .heading-container h1.active').removeClass('active').next().addClass('active');
+          setTimeout(function(){textSlider()}, 4000);
+        }
+        textSlider();
+      });
+      var alert = $('#alert'),
+          alertContent = $('#alert .alert-content');
+      function login() {
+        $(alert).fadeIn();
+        $(alertContent).addClass('active');
+      };
+      $('#alert i').click(function () {
+        $(alertContent).removeClass('active');
+        $(alert).fadeOut();
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+.environment, .social, .energie{
+  h2{
+    font-family: 'Kelly Slab', cursivess;
+    color: #95235f;
+    margin: 0;
+  }
+  ul li{
+    line-height: 1.9;
+    padding: 7px;
+    padding-left: 7px;
+    border-left: 5px solid #04753c;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px #9f9f9f;
+    color:#000;
+    background-color: rgba(255, 255, 255, .3);
+  }
+}
+.environment{
+  min-height: 84vh;
+  background: url('../images/environment.jpg') fixed 35% 100%;
+  @include prefixer(background-size, cover);
+}
+.social{
+  min-height: 84vh;
+  background: url('../images/social.jpg') fixed 50% 100%;
+  @include prefixer(background-size, cover);
+  ul li{
+    border-color: $lightBlue;
+    background-color: rgba(255, 255, 255, .5);
+  }
+}
+.energie{
+  min-height: 84vh;
+  background: url('../images/lmp.jpg') fixed 50% 40%;
+  @include prefixer(background-size, cover);
+  color: #000;
+  ul li{
+    border-color: #f55c00;
+    background-color: rgba(255, 255, 255, .65);
+  }
+}

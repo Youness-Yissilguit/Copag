@@ -1,0 +1,45 @@
+.services{
+  .context{
+    padding: 15px;
+    min-height: 350px;
+    h3{
+      &::after{
+        display: none
+      }
+      &::before{
+        color: #a85e24
+      }
+    }
+    p{
+      margin: 10px;
+    }
+    ul li{
+      margin-left: 20px;
+      i{
+        color: #a85e24
+      }
+    }
+  }
+  .text2{
+    background-color: #a85e24;
+    h3{
+      color: #FFF;
+      &::before{
+        color: #fff
+      }
+    }
+    p, ul li{
+      color: #FFF;
+    }
+    ul li i{
+      color: #FFF
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services{
+    .my-order{
+      order: 2
+    }
+  }
+}

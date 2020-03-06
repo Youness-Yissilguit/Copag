@@ -1,0 +1,68 @@
+.primeurs{
+  .context{
+    min-height:84vh;
+    .paragraph{
+      margin-bottom: 15px;
+      text-align: center;
+      min-height: 300px;
+      h4{
+        color: #000;
+        font-weight: bolder;
+        &:first-letter{
+          color: #00a730;
+        }
+      }
+      hr{
+        width: 50%;
+        margin: 15px auto;
+        border-color: #00a730
+      }
+      p{
+        color: #626262
+      }
+    }
+  }
+  .table-responsive-md>.table>tbody>tr>td,
+  .table-responsive-md>.table>tbody>tr>th{
+   white-space:nowrap
+  }
+  table{
+    background-color: #FFF;
+    border: 1px solid #ccc;
+  }
+  .img-container{
+    background-color: #FFF;
+    padding: 10px 50px
+  }
+  h2{
+    margin-bottom: 30px;
+    &::before{
+      color: #00a730
+    }
+    &:after{
+      background-color: #00a730
+    }
+  }
+  img{
+    height: 100%
+  }
+}
+@media (max-width: 767px) {
+  .primeurs{
+    .context{
+      background: url('../images/prim.jpg') no-repeat 50% 100% fixed;
+      @include prefixer(background-size, cover);
+      .paragraph{
+        min-height: auto;
+        margin-bottom: 20px;
+        p{
+          color: #282828;
+          font-weight: bold
+        }
+      }
+    }
+    .img-container{
+      padding: 10px
+    }
+  }
+}

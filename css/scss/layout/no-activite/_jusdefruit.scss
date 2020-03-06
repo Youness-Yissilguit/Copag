@@ -1,0 +1,30 @@
+.jus-fruits{
+  min-height: 72vh;
+  .disc{
+    h2::before{
+      color: #f7a600;
+    }
+    h2::after{
+      background-color: #f7a600;
+    }
+    p{
+      color: #676b6d;
+      font-size: 17px;
+    }
+  }
+  .jus-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .jus-fruits{
+    min-height: 70vh;
+    .disc{
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+}

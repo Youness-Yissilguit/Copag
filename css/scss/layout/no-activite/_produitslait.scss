@@ -1,0 +1,30 @@
+.produits-laitiers{
+  min-height: 72vh;
+  .disc{
+    p{
+      color: #676b6d;
+      font-size: 17px;
+    }
+  }
+  .lait-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .carousel-control-prev,
+    .carousel-control-next{
+      background-color: #00b6f5;
+      height: 50px;
+      margin-top: 10%;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .produits-laitiers{
+    min-height: 70vh;
+    .disc{
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+/*Start Thr Header*/
+header{
+  height: 100vh;
+  background: url('../images/header.jpg') no-repeat 50% 100% red;
+  background-size: cover;
+  //z-index: 0;
+  position: relative;
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba($mainBlue, .6) 0%, rgba(0,0,0,0.5) 63%, rgba(0,0,0,0.5) 100%);
+    //background: linear-gradient(180deg, rgba($mainBlue, .6) 0%, rgba(0,0,0,0.8) 63%, rgba(0,0,0,0.7) 100%);
+    z-index: 0
+  }
+  .content-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .heading-container{
+      width: 70%;
+      height: 40%;
+      overflow: hidden;
+      padding: 10px;
+      position: relative;
+      h1{
+        font-size: 2.6rem;
+        color: #FFF;
+        line-height: 1.9;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+        font-weight: bolder;
+        padding: 20px 5px;
+        height: 100%;
+        position: absolute;
+        bottom: -100%;
+        right: 0;
+        width: 100%;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        &::first-letter{
+          color: $lightBlue;
+        }
+        &.active{
+          bottom: 0;
+          opacity: 1
+        }
+      }
+    }
+  }
+}
+
+#alert{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, .9);
+  z-index: 999;
+  .alert-content{
+     width: 30%;
+     background-color: #FFF;
+     margin: 20px auto;
+     padding: 10px;
+     transform: translateY(-100%);
+     opacity: 0;
+     @include prefixer(transition, all .4s ease-in-out);
+     &.active{
+       transform: translateY(0);
+       opacity: 1
+     }
+     img{
+       width: 100%;
+       height: auto;
+     }
+     i{
+       display: block;
+       width: 100%;
+       text-align: right;
+       color: #222;
+       cursor: pointer;
+       font-size: 24px;
+       margin-bottom: 10px
+     }
+  }
+}
+
+@media (max-width: 797px) {
+  header{
+    .content-container{
+      .heading-container{
+        height: 50%;
+        width: 100%;
+        h1{
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 467px) {
+  #alert{
+    .alert-content{
+       width: 80%;
+    }
+  }
+}
+/*end the header*/

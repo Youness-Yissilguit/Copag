@@ -1,0 +1,49 @@
+.president-container{
+  min-height: 84vh;
+  margin-bottom: 10px;
+  .pr{
+    padding-right: 0;
+  }
+  .president-img{
+    border: 2px solid;
+    img{
+      width: 100%
+    }
+  }
+  .description{
+    background-color: #f7f7f7;
+    padding: 20px;
+    padding-top: 70px;
+    padding-right: 10px;
+    width: 100%;
+    h4{
+      position: absolute;
+      top: 5%;
+      left: 0;
+      background-color: $mainBlue;
+      color: #FFF;
+      padding: 5px
+    }
+  }
+}
+@media (max-width: 576px) {
+  .president-img{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      width: 100%
+    }
+  }
+  .description{
+    background-color: transparent;
+    padding-top: 100px;
+    h4{
+      font-size: 20px;
+      top: 0;
+    }
+  }
+  .pr{
+    padding-right: 15px !important;
+  }
+}

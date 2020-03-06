@@ -1,0 +1,66 @@
+.agrumes{
+  .context{
+    min-height:84vh;
+    .paragraph{
+      margin-bottom: 15px;
+      text-align: center;
+      min-height: 300px;
+      h4{
+        color: #000;
+        font-weight: bolder;
+        &:first-letter{
+          color: #ff5c33;
+        }
+      }
+      hr{
+        width: 50%;
+        margin: 15px auto;
+        border-color: #ff5c33
+      }
+      p{
+        color: #626262
+      }
+    }
+  }
+  .table-responsive-md>.table>tbody>tr>td,
+  .table-responsive-md>.table>tbody>tr>th{
+   white-space:nowrap
+  }
+  table{
+    background-color: #FFF;
+    border: 1px solid #ccc;
+  }
+  .img-container{
+    background-color: #FFF;
+    padding: 10px 50px
+  }
+  h2{
+    margin-bottom: 30px;
+    &::before{
+      color: #ff5c33
+    }
+    &:after{
+      background-color: #ff5c33
+    }
+  }
+  img{
+    height: 100%
+  }
+}
+@media (max-width: 768px) {
+  .agrumes{
+    .context{
+      background: url('../images/agr.jpg') no-repeat 100% 100% fixed;
+      @include prefixer(background-size, cover);
+      .paragraph{
+        p{
+          color: #282828;
+          font-weight: bold
+        }
+      }
+    }
+    .img-container{
+      padding: 10px
+    }
+  }
+}

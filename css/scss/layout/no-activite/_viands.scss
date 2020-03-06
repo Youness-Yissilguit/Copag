@@ -1,0 +1,53 @@
+.viandes{
+  .viande-description{
+    h4{
+      margin-top: 10px;
+      margin-bottom: 15px;
+      &::before{
+        color: #d20424;
+      }
+      &::after{
+        display: none
+      }
+    }
+    .p{
+      padding-left: 10px;
+      padding-right: 10px;
+      span{
+        font-size: 20px;
+        color: #000
+      }
+    }
+    .p2{
+      padding-left: 10px;
+      padding-right: 10px;
+      span{
+        font-weight: normal
+      }
+    }
+    ul li{
+      margin-left: 25px;
+      i{
+        color: #d20424
+      }
+    }
+  }
+  .meat-img{
+    height: 100%;
+    img{
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .viandes{
+    .reset-order{
+      order: 1
+    }
+    .viande-description{
+      h4{
+        margin-left: 30px
+      }
+    }
+  }
+}

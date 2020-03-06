@@ -1,0 +1,128 @@
+.marques{
+  .marque-img{
+    max-width: 120px;
+    margin: 0 auto 15px;
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      top: calc(50% - 4px);
+      height: 4px;
+      background-color: $mainBlue;
+      width: 100%;
+      right: -100%;
+    }
+    &::before{
+      left: -100%;
+    }
+  }
+  h4{
+    font-family: 'Kelly Slab', cursivess;
+    color: #000;
+    a{
+      color: #000;
+      text-decoration: underline;
+      &:hover{
+        color: $mainBlue
+      }
+    }
+    i{
+      color: $mainBlue
+    }
+  }
+}
+.jayda{
+  .marque-img{
+    &::after, &::before{
+      background-color: #d20424
+    }
+  }
+  p{
+    span{
+      font-weight: normal
+    }
+  }
+}
+
+.copag{
+  .marque-img{
+    &::after, &::before{
+      background-color: #00744a
+    }
+  }
+  h4{
+    a:hover{
+      color: #00744a;
+    }
+    i{
+      color: #00744a
+    }
+  }
+}
+.products-container{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0 ,.95);
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: none;
+  i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #d2d2d2;
+    cursor: pointer
+  }
+  .products-carousel{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .carousel-control-prev{
+      left: -100%;
+      background-color: $mainBlue;
+      height: 40px;
+      top: calc(100% - 40px);
+    }
+    .carousel-control-next{
+      right: -100%;
+      background-color: $mainBlue;
+      height: 40px;
+      top: calc(100% - 40px);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .marques{
+    h4{
+      font-size: 20px
+    }
+  }
+  .products-container{
+    .products-carousel{
+      width: 50%;
+      margin: 0 auto;
+      .carousel-control-prev{
+        left: 0;
+        bottom: -40px !important;
+        top: auto
+      }
+      .carousel-control-next{
+        right: 0;
+        bottom: -40px !important;
+        top: auto
+      }
+    }
+  }
+}
+@media (max-width: 568px) {
+  .products-container{
+    .products-carousel{
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
